@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investimento Meta Ads — Tathiane Deândhela · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A1220; --panel:#0F1A2B; --panel2:#13243A; --line:#1E3147;
+    --ink:#E6EDF3; --muted:#8CA2BC; --faint:#5C748F;
+    --amber:#FFB020; --amber-soft:rgba(255,176,32,.14);
+    --le:#5BC8FF; --le-soft:rgba(91,200,255,.12);
+    --fp:#7CE0B0; --fp-soft:rgba(124,224,176,.12);
+    --other:#B69DFF; --other-soft:rgba(182,157,255,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.45;
+    background-image:radial-gradient(900px 500px at 80% -10%,rgba(255,176,32,.06),transparent 60%),radial-gradient(700px 400px at -10% 10%,rgba(91,200,255,.05),transparent 55%);}
+  .wrap{max-width:1120px;margin:0 auto;padding:40px 22px 80px}
+  .mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+  .display{font-family:'Space Grotesk',sans-serif}
+
+  /* header */
+  header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+  .brand{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.32em;color:var(--muted);text-transform:uppercase}
+  .brand b{color:var(--ink);font-weight:700}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:600;letter-spacing:-.01em;margin-top:6px}
+  .sub{color:var(--muted);font-size:14px;margin-top:6px}
+  .periodtag{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--amber);border:1px solid var(--line);background:var(--amber-soft);padding:8px 12px;border-radius:8px;white-space:nowrap}
+
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--panel),var(--bg));border:1px solid var(--line);border-radius:18px;
+    padding:30px 30px 26px;margin-bottom:14px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+    background:radial-gradient(circle,var(--amber-soft),transparent 65%)}
+  .hero .lab{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .hero .big{font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,8vw,72px);font-weight:700;letter-spacing:-.02em;line-height:1;margin:8px 0 4px}
+  .hero .big span{color:var(--amber)}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);border:1px solid var(--line);
+    background:var(--panel2);padding:7px 12px;border-radius:999px}
+  .chip b{color:var(--ink);font-weight:700}
+
+  /* client split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:34px}
+  .ctile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .ctile .nm{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600}
+  .ctile .vl{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;margin-top:6px}
+  .ctile .pc{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:2px}
+  .track{height:7px;background:var(--panel2);border-radius:99px;margin-top:14px;overflow:hidden}
+  .track > i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--amber),#ffce6e)}
+
+  /* sections */
+  .sechead{display:flex;align-items:baseline;gap:12px;margin:34px 0 16px}
+  .sechead h2{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .sechead .rule{flex:1;height:1px;background:var(--line)}
+
+  .clientblock{margin-bottom:10px}
+  .clienttag{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink);display:flex;align-items:center;gap:10px;margin:22px 0 12px}
+  .clienttag .dot{width:8px;height:8px;border-radius:99px;background:var(--amber)}
+  .clienttag .tot{margin-left:auto;color:var(--muted)}
+  .clienttag .tot b{color:var(--ink)}
+
+  .acard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+  .acard .ah{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .acard .ah .an{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600}
+  .acard .ah .aid{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint)}
+  .acard .ah .av{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-left:auto}
+
+  .frow{display:grid;grid-template-columns:200px 1fr 132px;align-items:center;gap:14px;padding:9px 0;border-top:1px solid rgba(30,49,71,.55)}
+  .frow:first-of-type{border-top:none}
+  .fname{display:flex;align-items:center;gap:9px;min-width:0}
+  .fname .tg{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.08em;padding:3px 6px;border-radius:5px;white-space:nowrap}
+  .tg.le{color:var(--le);background:var(--le-soft)}
+  .tg.fp{color:var(--fp);background:var(--fp-soft)}
+  .tg.ot{color:var(--other);background:var(--other-soft)}
+  .fname .ftxt{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fbar{height:8px;background:var(--panel2);border-radius:99px;overflow:hidden}
+  .fbar > i{display:block;height:100%;border-radius:99px}
+  .fbar > i.le{background:linear-gradient(90deg,#2f8fc4,var(--le))}
+  .fbar > i.fp{background:linear-gradient(90deg,#3c9c74,var(--fp))}
+  .fbar > i.ot{background:linear-gradient(90deg,#7a63c4,var(--other))}
+  .fval{text-align:right}
+  .fval .v{font-family:'JetBrains Mono',monospace;font-size:13.5px;font-weight:500}
+  .fval .p{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted)}
+
+  /* ranking */
+  .rank .frow{grid-template-columns:188px 1fr 150px}
+  .rank .rk{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faint);width:20px;text-align:right}
+  .rankname{display:flex;align-items:center;gap:9px;min-width:0}
+
+  footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--faint);font-size:12px}
+  footer .mono{color:var(--muted)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin:2px 0 0}
+  .legend span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px}
+  .legend i{width:9px;height:9px;border-radius:3px;display:inline-block}
+
+  @media(max-width:720px){
+    .split{grid-template-columns:1fr}
+    .frow{grid-template-columns:120px 1fr;grid-template-areas:"n v" "b b";row-gap:8px}
+    .rank .frow{grid-template-columns:120px 1fr}
+    .fname{grid-area:n}.fval{grid-area:v}.fbar{grid-area:b}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand"><b>CAVOK</b> · performance</div>
+      <h1>Investimento Meta Ads — Tathiane Deândhela</h1>
+      <div class="sub">Instituto ID + Memorável · todas as contas · agrupado por conta › funil</div>
+    </div>
+    <div class="periodtag" id="periodtag">2026</div>
+  </header>
+
+  <section class="hero">
+    <div class="lab">Investimento geral · todas as contas</div>
+    <div class="big" id="grand">R$ 0</div>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <div class="split" id="split"></div>
+
+  <div class="sechead"><h2>Por conta › funil</h2><div class="rule"></div></div>
+  <div id="byaccount"></div>
+
+  <div class="sechead"><h2>Ranking geral por funil — todas as contas</h2><div class="rule"></div></div>
+  <div class="acard rank"><div id="ranking"></div></div>
+
+  <div class="legend">
+    <span><i style="background:#5BC8FF"></i> Le — Lançamento / Evento</span>
+    <span><i style="background:#7CE0B0"></i> Fp — Funil Perpétuo</span>
+    <span><i style="background:#B69DFF"></i> Outros</span>
+  </div>
+
+  <footer>
+    <div>Cavok · Rio de Janeiro / BR · fonte: Meta Ads API (campo <span class="mono">spend</span>, nível campanha)</div>
+    <div class="mono" id="stamp"></div>
+  </footer>
+</div>
+
+<script>
+const DATA = {"period": "01/01/2026 a 03/06/2026", "clients": {"Instituto ID": {"accounts": {"C1 (IPM)": {"acct": "act_1725623984282551", "total": 892368.58, "funnels": [{"name": "IPM-Fp01", "spend": 211416.94}, {"name": "DP100K-Fp01", "spend": 200480.83}, {"name": "VPO-Le01", "spend": 144813.35}, {"name": "IPM-Le01", "spend": 141983.87}, {"name": "DP100K-Fp02", "spend": 98057.13}, {"name": "IPM-Fp03", "spend": 90662.85}, {"name": "IPM-Fp02", "spend": 3520.05}, {"name": "IPL-Fp01", "spend": 1044.32}, {"name": "MXP-Le02", "spend": 305.05}, {"name": "Impulsionamentos IG", "spend": 84.19}]}, "C3 / Instituto ID": {"acct": "act_506518827383127", "total": 155941.01, "funnels": [{"name": "MXP-Le02", "spend": 93421.12}, {"name": "MXP-Le01", "spend": 41275.8}, {"name": "FA-Fp01", "spend": 17501.86}, {"name": "MXP-Fp01", "spend": 3742.23}]}, "C2": {"acct": "act_306533480853015", "total": 14494.02, "funnels": [{"name": "KLT", "spend": 14494.02}]}}, "total": 1062803.61}, "Memoravel": {"accounts": {"C1": {"acct": "act_1307282709635504", "total": 208040.16, "funnels": [{"name": "IPL-Fp01", "spend": 76030.69}, {"name": "IPL-Fp04", "spend": 35068.2}, {"name": "IPL-Le03", "spend": 23742.44}, {"name": "IPL-Fp02", "spend": 22598.3}, {"name": "IPL-Fp03", "spend": 21835.15}, {"name": "IPL-Le02", "spend": 15471.36}, {"name": "IPL-Le01", "spend": 11619.15}, {"name": "IPL-Le04", "spend": 1674.87}]}}, "total": 208040.16}}, "grand_total": 1270843.77, "funnel_ranking": [{"name": "IPM-Fp01", "spend": 211416.94}, {"name": "DP100K-Fp01", "spend": 200480.83}, {"name": "VPO-Le01", "spend": 144813.35}, {"name": "IPM-Le01", "spend": 141983.87}, {"name": "DP100K-Fp02", "spend": 98057.13}, {"name": "MXP-Le02", "spend": 93726.17}, {"name": "IPM-Fp03", "spend": 90662.85}, {"name": "IPL-Fp01", "spend": 77075.01}, {"name": "MXP-Le01", "spend": 41275.8}, {"name": "IPL-Fp04", "spend": 35068.2}, {"name": "IPL-Le03", "spend": 23742.44}, {"name": "IPL-Fp02", "spend": 22598.3}, {"name": "IPL-Fp03", "spend": 21835.15}, {"name": "FA-Fp01", "spend": 17501.86}, {"name": "IPL-Le02", "spend": 15471.36}, {"name": "KLT", "spend": 14494.02}, {"name": "IPL-Le01", "spend": 11619.15}, {"name": "MXP-Fp01", "spend": 3742.23}, {"name": "IPM-Fp02", "spend": 3520.05}, {"name": "IPL-Le04", "spend": 1674.87}, {"name": "Impulsionamentos IG", "spend": 84.19}], "generated": "03/06/2026"};
+
+const BRL = n => n.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2,maximumFractionDigits:2});
+const BRL0 = n => n.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+const pct = (a,b) => b? (a/b*100):0;
+function kind(name){
+  if(/-Le\d/i.test(name) || /\bLe0?\d/i.test(name)) return 'le';
+  if(/-Fp\d/i.test(name) || /\bFp0?\d/i.test(name)) return 'fp';
+  return 'ot';
+}
+function kindLabel(k){return k==='le'?'LE':k==='fp'?'FP':'··';}
+
+// period
+document.getElementById('periodtag').textContent = DATA.period.replace(' a ',' → ');
+
+// hero
+const grand = DATA.grand_total;
+let intg = Math.round(grand);
+document.getElementById('grand').innerHTML = 'R$ <span>'+intg.toLocaleString('pt-BR')+'</span>';
+
+const nClients = Object.keys(DATA.clients).length;
+let nAccts=0, nFunnels=DATA.funnel_ranking.length;
+Object.values(DATA.clients).forEach(c=>nAccts+=Object.keys(c.accounts).length);
+document.getElementById('chips').innerHTML = [
+  ['Clientes',nClients],['Contas com verba',nAccts],['Funis ativos',nFunnels],
+  ['Período', DATA.period.replace(' a ',' → ')]
+].map(([k,v])=>`<div class="chip">${k} <b>${v}</b></div>`).join('');
+
+// client split
+const clientOrder = Object.keys(DATA.clients).sort((a,b)=>DATA.clients[b].total-DATA.clients[a].total);
+document.getElementById('split').innerHTML = clientOrder.map(name=>{
+  const c=DATA.clients[name];
+  return `<div class="ctile">
+    <div class="nm">${name}</div>
+    <div class="vl">${BRL(c.total)}</div>
+    <div class="pc">${pct(c.total,grand).toFixed(1)}% do investimento geral · ${Object.keys(c.accounts).length} conta(s)</div>
+    <div class="track"><i style="width:${pct(c.total,grand).toFixed(1)}%"></i></div>
+  </div>`;
+}).join('');
+
+// by account
+document.getElementById('byaccount').innerHTML = clientOrder.map(cname=>{
+  const c=DATA.clients[cname];
+  const accs=Object.entries(c.accounts).sort((a,b)=>b[1].total-a[1].total);
+  const cards=accs.map(([alabel,a])=>{
+    const max=Math.max(...a.funnels.map(f=>f.spend));
+    const rows=a.funnels.map(f=>{
+      const k=kind(f.name);
+      return `<div class="frow">
+        <div class="fname"><span class="tg ${k}">${kindLabel(k)}</span><span class="ftxt" title="${f.name}">${f.name}</span></div>
+        <div class="fbar"><i class="${k}" style="width:${Math.max(2,pct(f.spend,max)).toFixed(1)}%"></i></div>
+        <div class="fval"><span class="v">${BRL(f.spend)}</span> <span class="p">${pct(f.spend,a.total).toFixed(0)}%</span></div>
+      </div>`;
+    }).join('');
+    return `<div class="acard">
+      <div class="ah"><span class="an">${alabel}</span><span class="aid">${a.acct}</span><span class="av">${BRL(a.total)}</span></div>
+      ${rows}
+    </div>`;
+  }).join('');
+  return `<div class="clientblock">
+    <div class="clienttag"><span class="dot"></span>${cname}<span class="tot">total <b>${BRL(c.total)}</b></span></div>
+    ${cards}
+  </div>`;
+}).join('');
+
+// ranking
+const rmax=Math.max(...DATA.funnel_ranking.map(f=>f.spend));
+document.getElementById('ranking').innerHTML = DATA.funnel_ranking.map((f,i)=>{
+  const k=kind(f.name);
+  return `<div class="frow">
+    <div class="rankname"><span class="rk">${i+1}</span><span class="tg ${k}">${kindLabel(k)}</span><span class="ftxt" title="${f.name}">${f.name}</span></div>
+    <div class="fbar"><i class="${k}" style="width:${Math.max(2,pct(f.spend,rmax)).toFixed(1)}%"></i></div>
+    <div class="fval"><span class="v">${BRL(f.spend)}</span> <span class="p">${pct(f.spend,grand).toFixed(1)}%</span></div>
+  </div>`;
+}).join('');
+
+document.getElementById('stamp').textContent = 'Atualizado em ' + (DATA.generated || '03/06/2026');
+</script>
+</body>
+</html>
