@@ -1,0 +1,1 @@
+facebook-business>=22.0.0
