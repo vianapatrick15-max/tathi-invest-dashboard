@@ -41,6 +41,10 @@ def funnel_key(name: str) -> str:
     if s.lower().startswith(("post do instagram", "publicacao", "publicação")):
         return "Impulsionamentos IG"
     s = re.sub(r"^ix\.\s*", "", s)
+    # Nomes com o "[" inicial perdido (ex.: "IPM-Fp03][POST_SCORE]_Post do
+    # Instagram: ...") caíam no fallback e viravam funil "IPM". Reconstrói.
+    if not s.startswith("[") and "]" in s and ("[" not in s or s.index("]") < s.index("[")):
+        s = "[" + s
     m = re.match(r"^\[([^\]]+)\]", s)
     key = m.group(1).strip() if m else re.split(r"\s*[-–]\s*|\[", s)[0].strip()
     m2 = re.match(r"^([A-Za-z]{2,5})[-\s]?(Le|Fp|LE|FP|le|fp)\s?0?(\d+)$", key)
