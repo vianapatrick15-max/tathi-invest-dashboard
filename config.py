@@ -13,9 +13,12 @@ ACCOUNTS = [
     {"key": "act_306533480853015",  "client": "Instituto ID", "label": "C2",                 "token_env": "META_TOKEN_ID",  "skill_env": "meta-ads-instituto-id"},
     {"key": "act_629440996401732",  "client": "Instituto ID", "label": "C4",                 "token_env": "META_TOKEN_ID",  "skill_env": "meta-ads-instituto-id"},
     {"key": "act_529640016271311",  "client": "Instituto ID", "label": "C5",                 "token_env": "META_TOKEN_ID",  "skill_env": "meta-ads-instituto-id"},
-    {"key": "act_1307282709635504", "client": "Memorável",    "label": "C1",                 "token_env": "META_TOKEN_MEM", "skill_env": "meta-ads-memoravel"},
-    {"key": "act_1835702343244302", "client": "Memorável",    "label": "C2",                 "token_env": "META_TOKEN_MEM", "skill_env": "meta-ads-memoravel"},
+    # Rótulos C1/C2 da Memorável trocaram de conta no Gerenciador em 07/2026 —
+    # estes labels seguem o nome oficial atual. Série histórica é por act_ID, não muda.
+    {"key": "act_1835702343244302", "client": "Memorável",    "label": "C1",                 "token_env": "META_TOKEN_MEM", "skill_env": "meta-ads-memoravel"},
+    {"key": "act_1307282709635504", "client": "Memorável",    "label": "C2",                 "token_env": "META_TOKEN_MEM", "skill_env": "meta-ads-memoravel"},
     {"key": "act_422653132521856",  "client": "Memorável",    "label": "C3",                 "token_env": "META_TOKEN_MEM", "skill_env": "meta-ads-memoravel"},
+    {"key": "act_1631219441753243", "client": "Memorável",    "label": "C4",                 "token_env": "META_TOKEN_MEM", "skill_env": "meta-ads-memoravel"},
 ]
 
 # Famílias na ordem preferida (extras presentes nos dados entram depois).
