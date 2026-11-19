@@ -245,7 +245,7 @@ const fmtDY=s=>s.slice(8,10)+'/'+s.slice(5,7)+'/'+s.slice(0,4);
 const iso=dt=>dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
 const $=id=>document.getElementById(id);
 
-const ST={from:DATA.bounds.min,until:DATA.bounds.max,accs:new Set(ACCS.map((_,i)=>i)),fams:new Set(FORDER)};
+const ST={from:DATA.bounds.min,until:DATA.bounds.max,accs:new Set(ACCS.map((_,i)=>i)),fams:new Set()};
 
 $('from').min=$('until').min=DATA.bounds.min; $('from').max=$('until').max=DATA.bounds.max;
 $('from').value=ST.from; $('until').value=ST.until;
@@ -268,19 +268,19 @@ $('accPills').onclick=e=>{const p=e.target.closest('.acc');if(!p)return;const i=
 
 $('famPills').innerHTML=FORDER.map(f=>`<span class="pill fam on" data-f="${f}" style="--cdot:${col(f)}"><i class="dot"></i>${f}</span>`).join('');
 $('famPills').onclick=e=>{const p=e.target.closest('.fam');if(!p)return;const f=p.dataset.f;
-  ST.fams.has(f)?ST.fams.delete(f):ST.fams.add(f);if(!ST.fams.size)FORDER.forEach(x=>ST.fams.add(x));sync();render()};
+  ST.fams.has(f)?ST.fams.delete(f):ST.fams.add(f);sync();render()};
 
 function sync(){
   document.querySelectorAll('.acc').forEach(p=>{const on=ST.accs.has(+p.dataset.i);p.classList.toggle('on',on);p.classList.toggle('off',!on)});
-  document.querySelectorAll('.fam').forEach(p=>{const on=ST.fams.has(p.dataset.f);p.classList.toggle('on',on);p.classList.toggle('off',!on)});
+  document.querySelectorAll('.fam').forEach(p=>{const on=!ST.fams.size||ST.fams.has(p.dataset.f);p.classList.toggle('on',on);p.classList.toggle('off',!on)});
 }
-$('resetAll').onclick=()=>{ST.from=DATA.bounds.min;ST.until=DATA.bounds.max;ST.accs=new Set(ACCS.map((_,i)=>i));ST.fams=new Set(FORDER);
+$('resetAll').onclick=()=>{ST.from=DATA.bounds.min;ST.until=DATA.bounds.max;ST.accs=new Set(ACCS.map((_,i)=>i));ST.fams=new Set();
   $('from').value=ST.from;$('until').value=ST.until;clearMonth();document.querySelector('.mon[data-m="all"]').classList.add('on');sync();render()};
 
 function aggregate(){
   let grand=0;const byClient={},fg={},fam={},byDate={};
   for(const[ai,fk,d,sp]of REC){
-    if(d<ST.from||d>ST.until||!ST.accs.has(ai)||!ST.fams.has(FAMOF[fk]))continue;
+    if(d<ST.from||d>ST.until||!ST.accs.has(ai)||(ST.fams.size&&!ST.fams.has(FAMOF[fk])))continue;
     grand+=sp;const a=ACCS[ai];
     const cl=byClient[a.client]||(byClient[a.client]={total:0,accounts:{}});cl.total+=sp;
     const ac=cl.accounts[a.label]||(cl.accounts[a.label]={acct:a.key,total:0,funnels:{}});ac.total+=sp;
